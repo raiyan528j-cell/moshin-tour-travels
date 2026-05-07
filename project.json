@@ -1,0 +1,27 @@
+{
+  "overview": "Premium, conversion-focused travel and taxi service website for Moshin Tour and Travels — an Agra-based company serving all of India. Features WhatsApp booking integration, SEO optimization, tour packages, pricing, and a trust-building design.",
+  "features": [
+    "Hero section with WhatsApp booking CTA",
+    "Popular routes with pricing cards",
+    "Tour packages and destination highlights",
+    "Taxi pricing tiers (Economy and Premium/SUV)",
+    "Customer testimonials",
+    "Floating WhatsApp button on all pages",
+    "Contact page with Google Maps embed",
+    "SEO meta tags and semantic HTML structure",
+    "Smooth animations and scroll-reveal effects",
+    "Mobile-first fully responsive design"
+  ],
+  "category": "showcase",
+  "tags": [
+    "travel",
+    "taxi",
+    "india",
+    "agra",
+    "tour-packages",
+    "whatsapp-booking",
+    "seo",
+    "landing-page"
+  ],
+  "last_updated": "2026-05-06T12:25:12.350Z"
+}
