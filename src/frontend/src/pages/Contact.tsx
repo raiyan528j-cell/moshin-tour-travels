@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+import MetaTags from "../components/MetaTags";
 import { Card, CardContent } from "../components/ui/card";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
@@ -72,6 +73,10 @@ export default function Contact() {
 
   return (
     <>
+      <MetaTags
+        title="Contact Us | Moshin Tour & Travels | Taxi Service in Agra"
+        description="Contact Moshin Tour & Travels (MK Travels) for Taxi Service in Agra, Cab Booking Agra, Agra Tour Packages, and Outstation Taxi Service. Call +91 7060535667 or WhatsApp now!"
+      />
       {/* Page Header */}
       <section
         className="relative pt-36 pb-24 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-hidden"
@@ -199,9 +204,21 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="btn-whatsapp inline-flex items-center gap-2 w-full justify-center text-base py-4 rounded-xl shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_24px_rgba(37,211,102,0.55)]"
               data-ocid="contact.whatsapp_direct_button"
+              aria-label="Chat on WhatsApp with Moshin Tour and Travels"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5" aria-hidden="true" />
               Chat Directly on WhatsApp
+            </a>
+
+            {/* Call Now CTA */}
+            <a
+              href="tel:+917060535667"
+              className="inline-flex items-center gap-2 w-full justify-center text-base py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+              data-ocid="contact.call_now_button"
+              aria-label="Call Moshin Tour and Travels now"
+            >
+              <Phone className="w-5 h-5" aria-hidden="true" />
+              Call Now
             </a>
           </motion.div>
 
@@ -234,11 +251,14 @@ export default function Contact() {
                     </Label>
                     <Input
                       id="contact-name"
+                      name="name"
                       placeholder="Enter your full name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       className="h-11 rounded-xl"
                       data-ocid="contact.name_input"
+                      aria-required="true"
+                      autoComplete="name"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -250,12 +270,15 @@ export default function Contact() {
                     </Label>
                     <Input
                       id="contact-phone"
+                      name="phone"
                       type="tel"
                       placeholder="+91 XXXXX XXXXX"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="h-11 rounded-xl"
                       data-ocid="contact.phone_input"
+                      aria-required="true"
+                      autoComplete="tel"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -267,13 +290,22 @@ export default function Contact() {
                     </Label>
                     <Textarea
                       id="contact-message"
+                      name="message"
                       placeholder="Tell us about your travel needs — destination, dates, group size…"
                       rows={5}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       className="rounded-xl resize-none"
                       data-ocid="contact.message_textarea"
+                      aria-describedby="contact-message-help"
                     />
+                    <p
+                      id="contact-message-help"
+                      className="text-xs text-muted-foreground"
+                    >
+                      Include destination, dates, and number of travelers for a
+                      faster response.
+                    </p>
                   </div>
 
                   <button
@@ -282,8 +314,9 @@ export default function Contact() {
                     disabled={!name || !phone}
                     className="btn-whatsapp w-full inline-flex items-center justify-center gap-2 text-base py-4 rounded-xl shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_24px_rgba(37,211,102,0.5)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none"
                     data-ocid="contact.form_submit_button"
+                    aria-label="Send inquiry via WhatsApp"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4" aria-hidden="true" />
                     Send via WhatsApp
                   </button>
                   <p className="text-xs text-muted-foreground text-center">

@@ -12,6 +12,7 @@ import {
   Star,
 } from "lucide-react";
 import { motion } from "motion/react";
+import MetaTags from "../components/MetaTags";
 import { Card, CardContent } from "../components/ui/card";
 
 const packages = [
@@ -20,6 +21,7 @@ const packages = [
     duration: "1 Day",
     highlights: ["Taj Mahal", "Agra Fort", "Fatehpur Sikri", "Mehtab Bagh"],
     img: "/assets/generated/route-agra-delhi.dim_800x500.jpg",
+    alt: "Same Day Agra Tour – Taj Mahal sightseeing taxi package – Moshin Tour & Travels",
     price: "₹2,500+",
     tag: "Best Seller",
     tagColor: "bg-amber-500",
@@ -34,6 +36,7 @@ const packages = [
       "Hadimba Temple",
     ],
     img: "/assets/generated/route-manali.dim_800x500.jpg",
+    alt: "Agra Tour Packages – Manali Himalayan retreat by taxi – MK Travels",
     price: "₹18,000+",
     tag: "Popular",
     tagColor: "bg-blue-500",
@@ -43,6 +46,7 @@ const packages = [
     duration: "7–10 Days",
     highlights: ["Dal Lake Shikara", "Gulmarg", "Pahalgam", "Sonamarg"],
     img: "/assets/generated/route-kashmir.dim_800x500.jpg",
+    alt: "Outstation Taxi Service Agra – Kashmir paradise tour package – Moshin Tour & Travels",
     price: "₹28,000+",
     tag: "Premium",
     tagColor: "bg-purple-600",
@@ -52,6 +56,7 @@ const packages = [
     duration: "10–12 Days",
     highlights: ["Pangong Tso", "Nubra Valley", "Leh Palace", "Zanskar"],
     img: "/assets/generated/route-ladakh.dim_800x500.jpg",
+    alt: "Cab Booking Agra – Ladakh adventure circuit taxi tour – MK Travels",
     price: "₹35,000+",
     tag: "Adventure",
     tagColor: "bg-orange-500",
@@ -66,6 +71,7 @@ const packages = [
       "Thekkady",
     ],
     img: "/assets/generated/route-kerala.dim_800x500.jpg",
+    alt: "Travel Agency in Agra – Kerala backwaters escape tour package – Moshin Tour & Travels",
     price: "₹45,000+",
     tag: "Luxury",
     tagColor: "bg-emerald-600",
@@ -125,6 +131,10 @@ const features = [
 export default function Services() {
   return (
     <>
+      <MetaTags
+        title="Tour Packages & Taxi Services | Moshin Tour & Travels"
+        description="Explore Agra Tour Packages, Outstation Taxi Service, Same Day Agra Tour, and Cab Booking Agra with Moshin Tour & Travels (MK Travels). Book now via WhatsApp!"
+      />
       {/* Page Header */}
       <section
         className="relative pt-36 pb-24 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-hidden"
@@ -205,7 +215,7 @@ export default function Services() {
                   <div className="relative h-52 overflow-hidden">
                     <img
                       src={pkg.img}
-                      alt={pkg.title}
+                      alt={pkg.alt}
                       className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
                       loading="lazy"
                     />
@@ -260,6 +270,17 @@ export default function Services() {
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
                         Book Now
+                      </a>
+                    </div>
+                    {/* Internal link to contact */}
+                    <div className="pt-2">
+                      <a
+                        href="/contact"
+                        className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                        data-ocid={`services.package_contact_link.${i + 1}`}
+                      >
+                        Book this package
+                        <ArrowRight className="w-3 h-3" />
                       </a>
                     </div>
                   </CardContent>
@@ -418,6 +439,14 @@ export default function Services() {
                 <ArrowRight className="w-4 h-4" />
                 Contact Us
               </Link>
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 border-2 border-white/30 text-white/90 font-semibold px-8 py-4 rounded-full hover:bg-white/10 hover:border-white/60 transition-all duration-200"
+                data-ocid="services.cta_quote_button"
+              >
+                <ArrowRight className="w-4 h-4" />
+                Get a free quote
+              </a>
             </div>
           </motion.div>
         </div>

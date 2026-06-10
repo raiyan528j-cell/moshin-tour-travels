@@ -31,9 +31,12 @@ export default function Footer() {
               </span>
             </div>
           </div>
-          <p className="text-sm text-white/55 leading-relaxed mb-6 max-w-sm">
+          <p className="text-sm text-white/55 leading-relaxed mb-2 max-w-sm">
             Premium taxi and tour services across India, based in Agra. Trusted
             by 500+ happy travellers since 2010. Your comfort is our commitment.
+          </p>
+          <p className="text-sm text-white/40 leading-relaxed mb-6 max-w-sm italic">
+            Also known as MK Travels
           </p>
           {/* Social */}
           <div className="flex gap-3 mb-6">

@@ -135,7 +135,7 @@ const routes = [
     duration: "4 hrs",
     distance: "210 km",
     img: "/assets/generated/route-agra-delhi.dim_800x500.jpg",
-    alt: "Taj Mahal Agra to Delhi route",
+    alt: "Taxi Service in Agra – Outstation cab from Agra to Delhi – Moshin Tour & Travels",
   },
   {
     from: "Agra",
@@ -144,7 +144,7 @@ const routes = [
     duration: "5 hrs",
     distance: "240 km",
     img: "/assets/generated/route-agra-delhi.dim_800x500.jpg",
-    alt: "Agra to Jaipur route",
+    alt: "Cab Booking Agra – Agra to Jaipur taxi route – MK Travels",
   },
   {
     from: "Agra",
@@ -153,7 +153,7 @@ const routes = [
     duration: "12 hrs",
     distance: "600 km",
     img: "/assets/generated/route-manali.dim_800x500.jpg",
-    alt: "Manali Himalayan mountains",
+    alt: "Agra Tour Packages – Manali Himalayan tour by taxi – Moshin Tour & Travels",
   },
   {
     from: "Agra",
@@ -162,7 +162,7 @@ const routes = [
     duration: "16 hrs",
     distance: "900 km",
     img: "/assets/generated/route-kashmir.dim_800x500.jpg",
-    alt: "Kashmir Dal Lake",
+    alt: "Outstation Taxi Service Agra – Kashmir tour package – MK Travels",
   },
   {
     from: "Agra",
@@ -171,7 +171,7 @@ const routes = [
     duration: "30 hrs",
     distance: "2,100 km",
     img: "/assets/generated/route-kerala.dim_800x500.jpg",
-    alt: "Kerala backwaters",
+    alt: "Travel Agency in Agra – Kerala backwaters tour package – Moshin Tour & Travels",
   },
   {
     from: "Agra",
@@ -180,7 +180,7 @@ const routes = [
     duration: "20 hrs",
     distance: "1,200 km",
     img: "/assets/generated/route-ladakh.dim_800x500.jpg",
-    alt: "Ladakh Pangong Lake",
+    alt: "Same Day Agra Tour – Ladakh adventure taxi package – MK Travels",
   },
 ];
 
@@ -431,6 +431,14 @@ export default function Home() {
               size="lg"
               ocid="home.hero_whatsapp_button"
             />
+            <a
+              href="tel:+917060535667"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 font-semibold rounded-full hover:bg-blue-50 transition-all duration-200 text-base shadow-lg hover:shadow-xl hover:scale-105"
+              data-ocid="home.hero_call_button"
+            >
+              <Phone className="w-5 h-5" />
+              Call Now
+            </a>
             <button
               type="button"
               onClick={scrollToPricing}
@@ -630,6 +638,42 @@ export default function Home() {
           <p className="text-center text-slate-400 text-sm mt-10">
             All fares include professional driver & AC. Toll charges extra.
           </p>
+
+          {/* Internal link to Services */}
+          <div className="text-center mt-6">
+            <a
+              href="/services"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors duration-200"
+              data-ocid="home.pricing_services_link"
+            >
+              View all services
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+
+          {/* Pricing card images (decorative, keyword-rich alt for SEO) */}
+          <div className="sr-only" aria-hidden="false">
+            <img
+              src="/assets/generated/hero-agra-taxi.dim_1600x900.jpg"
+              alt="Taxi Service in Agra – Moshin Tour & Travels premium cab fleet"
+              loading="lazy"
+            />
+            <img
+              src="/assets/generated/route-agra-delhi.dim_800x500.jpg"
+              alt="Cab Booking Agra – Economy sedan taxi for local and outstation travel – MK Travels"
+              loading="lazy"
+            />
+            <img
+              src="/assets/generated/route-manali.dim_800x500.jpg"
+              alt="Agra Tour Packages – Premium Innova Crysta for family trips – Moshin Tour & Travels"
+              loading="lazy"
+            />
+            <img
+              src="/assets/generated/route-kashmir.dim_800x500.jpg"
+              alt="Outstation Taxi Service Agra – Luxury SUV for long-distance travel – MK Travels"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
@@ -677,6 +721,18 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Internal link to Services page */}
+          <div className="text-center mt-10">
+            <a
+              href="/services"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors duration-200"
+              data-ocid="home.services_explore_link"
+            >
+              Explore tour packages
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -850,7 +906,10 @@ export default function Home() {
                     &ldquo;{t.review}&rdquo;
                   </p>
                   <div className="flex items-center gap-3 pt-4 border-t border-white/15">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center shrink-0">
+                    <div
+                      className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center shrink-0"
+                      aria-hidden="true"
+                    >
                       <span className="text-white text-sm font-bold">
                         {t.name[0]}
                       </span>
@@ -865,6 +924,18 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Internal link from testimonials */}
+          <div className="text-center mt-12">
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 text-blue-300 hover:text-white font-semibold text-sm transition-colors duration-200"
+              data-ocid="home.testimonials_book_link"
+            >
+              Book your ride
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>

@@ -49,14 +49,14 @@ export default function Navbar() {
                 scrolled ? "text-slate-900" : "text-white"
               }`}
             >
-              Moshin Tour
+              Moshin Tour &amp; Travels
             </span>
             <span
               className={`block text-[0.6875rem] tracking-widest uppercase font-display transition-colors duration-300 ${
                 scrolled ? "text-slate-400" : "text-white/60"
               }`}
             >
-              &amp; Travels
+              Taxi Service in Agra
             </span>
           </div>
         </Link>
